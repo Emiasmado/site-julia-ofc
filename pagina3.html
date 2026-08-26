@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ddlc</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+  body {
+    position: relative;
+    width: 105vw;
+    height: 110vh;
+    background: black;
+  }
+    img {
+      z-index: 0;
+      position: absolute;
+      width:100%;
+      height: 100%
+      object-fit: cover;
+    }
+</style>
+</head>
+<body>
+   <img src="https://i.postimg.cc/QdcYtTHk/Whats-App-Image-2026-07-29-at-22-06-43(1).jpg">
+    <p id="texto"></p>
+  <button id="botao" onclick="window.location.href='pagina4.html'">▶</button>
+  <style>
+    #texto {
+      position: absolute;
+      bottom: -1%;
+      left: 65%;
+      transform: translateX(-50%);
+      width: 75%;
+      color #333;
+      font-size: 1.3rem;
+      font-family: Arial, sans-serif;
+      }
+    #botao {
+      position: absolute;
+      z-index: 10;
+      bottom: -7%;
+      right: 6%;
+      background: transparent;
+      border: none;
+      font-size: 10rem;
+      cursor: pointer;
+      color: #333;
+      }
+    </style>
+  <script>
+    const frase = "Oii, tristes e raivosos 90 anos, tu parece uma idosa feiosa"
+      const textoEL = document.getElementById("texto");
+    let i = 0;
+    function digitar() {
+      if (i < frase.length) {
+        textoEL.textContent += frase[i];
+        i++;
+        setTimeout(digitar, 40);
+        }
+      }
+    digitar();
+    </script>
+</body>
+</html>
